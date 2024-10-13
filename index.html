@@ -1,0 +1,1264 @@
+<!-- 
+.___  ___.  ______  
+|   \/   | |____  | 
+|  \  /  |     / /  
+|  |\/|  |    / /   
+|  |  |  |   / /    
+|__|  |__|  /_/     
+                     -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="A web created to host downloads of pandora machine" />
+        <meta name="author" content="M7" />
+        <title>PandoraBox - By M7</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="https://www.linkedin.com/in/miguel-moreno-pastor/?locale=en_US">PandoraBox</a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">M7 PandoraBox</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">The Forensics and Reverse engineers ally</h2>
+                        <a class="btn btn-primary" href="#challenge">Download</a>
+                        <br><br>
+                        <a class="btn btn-primary" href="#specs">See what is included!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Challenge-->
+        <section class="about-section text-center" id="challenge">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">What is PandoraBox?</h2>
+                        <p class="text-white-50">
+                            Pandora is Windows 11 distro, that has been modified by my self, with the aim to boost performance without compromising the security.<br><br>
+                            It has all forensic and reversing tools that i find usefull to carry on investigations, it's important to higlight that PandoraBox <b><i>IS NOT A SANDBOX</i></b>
+                            but it can be configured and use as a sandbox with out any problem, but it's recommenden to use the sandbox tools that are inside.
+
+                            <br><br>
+                            <b>This ISO can be mounted on VirtualBox, VmWare, Hyper-V, Ventoy...</b>
+
+                            <br><br>
+                            <a onclick="startDownload()" href="">Start the download!</a>
+                            <br>
+                            <br>
+                            Note: The default credentials are User: M7PandoraBox DefaultPassword: M7P@nd0r@B0x
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="" alt="" />
+            </div>
+        </section>
+
+        <!--AUTO-UPDATE TOOL -->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/gift/updaterTool.gif" alt="giveUpImage" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Updater Tool</h4>
+                            <p class="text-black-50 mb-0">
+                                With this tool you will be able to always have all tools up to day, just run it and select what sections you want to update
+                                <br><br>
+                                (You will be able to found this tool on the user's desktop as well as on the toolbar)
+                                <br><br>
+                                <a href="https://github.com/mimorep/PandoraBox/wiki/ToolUpdater">See more details on the Wiki</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORENSICS TOOLS -->
+        <section class="projects-section bg-light" id="forensicsTools">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left" style="border-right: 0.5rem solid #585858 ; border-left: 0rem; padding: 0 2rem 0 0;">
+                            <h4>Foresincs Tools</h4>
+                            <p class="text-black-50 mb-0">
+                                On the image a folder is created with this image logo, navigate to it to get access to the forensics tools.
+                                <br>
+                                <br>
+                                (A shorcut will be added to the taskbar as well as the user's desktop during the Set-Up)
+                                <br><br>
+                                <a href="https://github.com/mimorep/PandoraBox/wiki/Forensics-Tools">See more details on the Wiki</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-7"><img style="padding-left: 25%;" class="img-fluid mb-3 mb-lg-0" src="assets/img/Forensics.png" alt="forensicsLogoFolder" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reversing Tools -->
+        <section class="projects-section bg-light" id="reversingTools">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/ReversingTools.png" alt="reversingLogoFolder" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Reversing Tools</h4>
+                            <p class="text-black-50 mb-0">
+                                On the image a folder is created with this image logo, navigate to it to get access to the reversing tools.
+                                <br>
+                                <br>
+                                (A shorcut will be added to the taskbar as well as the user's desktop during the Set-Up)
+                                <br><br>
+                                <a href="https://github.com/mimorep/PandoraBox/wiki/Reversing-Tools">See more details on the Wiki</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications -->
+        <section class="Hall-section" id="specs">
+            <div class="container px-4 px-lg-5">
+                <h1>Specifications</h1>
+                <br>
+                <p>
+                    In this section you will find several tables with the specifications necessary to run the ISO image, as well as all the special features of the ISO image.
+                </p>
+                <br>
+                <!-- Hardware table -->
+                <style>
+                    .hardwarespecification {
+                        overflow: auto;
+                        width: 100%;
+                    }
+                    
+                    .hardwarespecification table {
+                        border: 1px solid #dededf;
+                        height: 100%;
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-spacing: 1px;
+                        text-align: center;
+                    }
+                    
+                    .hardwarespecification caption {
+                        caption-side: top;
+                        text-align: center;
+                    }
+                    
+                    .hardwarespecification th {
+                        border: 1px solid #dededf;
+                        background-color: #f58300;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    
+                    .hardwarespecification td {
+                        border: 1px solid #dededf;
+                        background-color: #ffffff;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    </style>
+                    <div class="hardwarespecification" role="region" tabindex="0">
+                    <table>
+                        <caption>Required Hardware</caption>
+                        <thead>
+                            <tr>
+                                <th>Specification</th>
+                                <th>At least</th>
+                                <th>Recommended</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CPU</td>
+                                <td>2 cores</td>
+                                <td>4 cores</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>2 Gb</td>
+                                <td>4-8 GB</td>
+                            </tr>
+                            <tr>
+                                <td>GPU</td>
+                                <td>n.a</td>
+                                <td>Nvidia GTX 1050</td>
+                            </tr>
+                            <tr>
+                                <td>Storage</td>
+                                <td>70 GB</td>
+                                <td>100-200 GB</td>
+                            </tr>
+                            <tr>
+                                <td>EFI</td>
+                                <td>n.a</td>
+                                <td>n.a</td>
+                            </tr>
+                            <tr>
+                                <td>VirtualBox Ready</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Hyper-V Ready</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Ventoy Ready</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                <!-- End Hardware table -->
+                <br>
+                <!-- Specific characteristics table -->
+                <style>
+                    .spectstable {
+                        overflow: auto;
+                        width: 100%;
+                    }
+                    
+                    .spectstable table {
+                        border: 1px solid #dededf;
+                        height: 100%;
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-spacing: 1px;
+                        text-align: center;
+                    }
+                    
+                    .spectstable caption {
+                        caption-side: top;
+                        text-align: center;
+                    }
+                    
+                    .spectstable th {
+                        border: 1px solid #dededf;
+                        background-color: #f58300;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    
+                    .spectstable td {
+                        border: 1px solid #dededf;
+                        background-color: #ffffff;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    </style>
+                    <div class="spectstable" role="region" tabindex="0">
+                    <table>
+                        <caption>Specs Removed/Edited</caption>
+                        <thead>
+                            <tr>
+                                <th>Spec</th>
+                                <th>Category</th>
+                                <th>Action Taken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Quick assist</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Clipchamp</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Feedback Hub</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Get Help</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Mail and Calendar</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft New</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft People</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft Solitarie Collection</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft Stick Notes</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft To Do</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>MSN Weather</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Office</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Power Automate</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Tips</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows Maps</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>XBOX Game Bar Plugin</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>XBOX Game Speech Window</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>XBOX Core&nbsp;</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>XBOX Game UI&nbsp;</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Your Phone&nbsp;</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Internet Explorer</td>
+                                <td>Default Windows Item</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>.NET Framework 4.8 Advanced Services</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft Print to PDF</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Remote Diferential Compression</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Hyper-V</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>SMB 1.0/CIFS File Sharing Support</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows PowerShell 2.0</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows Sandbox</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows Search</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Work Folders Client</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows Subsytem</td>
+                                <td>Windows Features</td>
+                                <td><b>Activated</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Acent colors changed</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>To M7 accent colors</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Context menu&nbsp;</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed Windows 11, set to original</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Darkmode for apps</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Darkmode for Windows</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Dynamic lock&nbsp;</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Notification center</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Recently opened items in Jump list&nbsp;</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Search icon (just press windows buttom and type)</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show People (Taskbar) disabled</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Start layout&nbsp;</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>More Pins</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Taskbar aligment</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Set to Left</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Taskbar Chat</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Taskbar Widgets</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Teams install</div>
+                                    </div>
+                                </td>
+                                <td>Desktop Settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Impr pant button</td>
+                                <td>Desktop Settings</td>
+                                <td><b>Pops the snipping tool</b></td>
+                            </tr>
+                            <tr>
+                                <td>Evtx</td>
+                                <td>EVTX Config</td>
+                                <td><b>Default config</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Appointments</div>
+                                    </div>
+                                </td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Call History</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Camera</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Contacts</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Diagnosis Information</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Messages</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Microphone</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Notifications</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Phone calls</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Tasks</td>
+                                <td>App Access</td>
+                                <td><b>Not Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Video Library</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>NVIDIA driver</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Location services</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Telemetry</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Radios</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Share adn sync info with non-explicit wireless devices</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>Experimentation</td>
+                                <td>App Access</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto install of sponsored apps</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto connect to hotspots to check paid network</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto connect to suggested hotspots</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto install suggested apps</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Clipboard history</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cortana</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cortana - Activiy recommendation</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cortana - Use my signed-in devices history</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cortana try button</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows feedback</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Recent entrys for File Explorer</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Microsoft recomendations</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Advertisement ID profile</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Suggested application download (such as minecraft...)</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>OEM apps</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows Timeline</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows Jumplists</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Access to local language for websites</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Pres-Installed apps</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Input data sended to Microsoft</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cloud search</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Bing results</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Send Microsoft info</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Shellbags</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Search historic of the device</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Suggested content of settings</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Frequently used folders in Quick access</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows welcome after each update</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Suggestion to online setup</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Recent files in Quick access</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows spotligth</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Send browsing data to Microsoft</div>
+                                    </div>
+                                </td>
+                                <td>Privacity settings</td>
+                                <td><b>Removed</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Cache thumbnails</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Clear history of recent items</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Up cmd with shift + rigth-click on context menu</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Replace cmd with powershell in command prompt</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show checkbox for items</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show empty drives</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show extensions of files</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show hidden files, folders or drives</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show protected OS files</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Enabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows defender</td>
+                                <td>Explorer configuration</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Tamper protection</div>
+                                    </div>
+                                </td>
+                                <td>Explorer configuration</td>
+                                <td><b>Disabled</b><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto driver update</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto speech models update</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Auto device drivers update over internet</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Download updates over metered connection</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Get the lastest updates as soon as release</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Give updates about microsoft products</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Prompt 'Windows Update is on its way'</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Show notification when update is need it</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Restat PC as soon as posible when required update</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows Updates</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Manual</b><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Windows Store</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Manual</b><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div>Download and install windows updates&nbsp;</div>
+                                    </div>
+                                </td>
+                                <td>Windows Updates</td>
+                                <td><b>Manual</b></td>
+                            </tr>
+                            <tr>
+                                <td>General Services</td>
+                                <td>Services</td>
+                                <td><b>Removed un-sense services (ej: xbox)</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>UserName</b></td>
+                                <td><b>Default User Information</b></td>
+                                <td>
+                                    <div>
+                                        <div><b>M7PandoraBox</b></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Password</b></td>
+                                <td><b>Default User Information</b></td>
+                                <td>
+                                    <div>
+                                        <div><b>M7P@nd0r@B0x</b></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>DisplayName</b></td>
+                                <td><b>Default User Information</b></td>
+                                <td><b>Pandora</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>Group</b></td>
+                                <td><b>Default User Information</b></td>
+                                <td><b>Administrators</b></td>
+                            </tr>
+                            <tr>
+                                <td>EULA page</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Local account setup</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Wireless setup</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Privacity</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip (See privaty category)</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows Welcome</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Welcome Center</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Windows activation</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Skip</b></td>
+                            </tr>
+                            <tr>
+                                <td>Send reports to Microsoft</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Disabled</b></td>
+                            </tr>
+                            <tr>
+                                <td>Dynamic updates</td>
+                                <td>Set-Up ISO Process</td>
+                                <td><b>Disabled</b></td>
+                            </tr>                     
+                        </tbody>
+                    </table>
+                    <br>
+                
+                <p>If you have any questions or need help with anything you can contact me <a class="navbar-brand" href="https://www.linkedin.com/in/miguel-moreno-pastor/?locale=en_US">here</a></p>
+                    </div>
+                <!-- End Specific characteristics table -->
+
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Developed by M7</div></footer>
+        <!-- Bootstrap Imports-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/multithreadDownloader.js"></script>
+        <script>
+
+            initAntiDebugger();
+            checkF12Pressed ()
+
+            if (localStorage.getItem("sessionCokie") != null) {  document.body.innerHTML = ""; window.location = 'about:blank'; window.location = "https://www.youtube.com/watch?v=KEkrWRHCDQU"; }
+        </script>
+    </body>
+</html>
