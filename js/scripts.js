@@ -38,5 +38,9 @@ window.addEventListener('DOMContentLoaded', event => {
 function startDownload()
 {
     // TODO: Probar si se puede subir la iso zippeda a github, para ver si se puede descargar desde ahí
+
+    var downloadLink = "https://mega.nz/folder/ajJ2HCCT#t_kk0v1Cs8-ZFbRmtbVoHQ";
+
+    window.open(downloadLink, '_blank').focus();
     
 }

@@ -36,10 +36,10 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">M7 PandoraBox</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">The Forensics and Reverse engineers ally</h2>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">The Forensics and Reverse engineers ISO</h2>
                         <a class="btn btn-primary" href="#challenge">Download</a>
-                        <br><br>
-                        <a class="btn btn-primary" href="#specs">See what is included!</a>
+                        <a class="btn btn-primary" href="#tools">Included Tools</a>
+                        <a class="btn btn-primary" href="#specs">See specs</a>
                     </div>
                 </div>
             </div>
@@ -51,10 +51,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">What is PandoraBox?</h2>
                         <p class="text-white-50">
-                            Pandora is Windows 11 distro, that has been modified by my self, with the aim to boost performance without compromising the security.<br><br>
-                            It has all forensic and reversing tools that i find usefull to carry on investigations, it's important to higlight that PandoraBox <b><i>IS NOT A SANDBOX</i></b>
-                            but it can be configured and use as a sandbox with out any problem, but it's recommenden to use the sandbox tools that are inside.
-
+                            Pandora is Windows 11 distro, that has been modified, with the aim to boost performance without compromising the security.
                             <br><br>
                             <b>This ISO can be mounted on VirtualBox, VmWare, Hyper-V, Ventoy...</b>
 
@@ -62,7 +59,7 @@
                             <a onclick="startDownload()" href="">Start the download!</a>
                             <br>
                             <br>
-                            Note: The default credentials are User: M7PandoraBox DefaultPassword: M7P@nd0r@B0x
+                            Note: The default credentials are <b>User: </b>M7PandoraBox <b>DefaultPassword:</b> P@nd0r@B0x
                         </p>
                     </div>
                 </div>
@@ -128,6 +125,49 @@
                                 (A shorcut will be added to the taskbar as well as the user's desktop during the Set-Up)
                                 <br><br>
                                 <a href="https://github.com/mimorep/PandoraBox/wiki/Reversing-Tools">See more details on the Wiki</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Little Windows version -->
+        <section class="projects-section bg-light" id="forensicsTools">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left" style="border-right: 0.5rem solid #585858 ; border-left: 0rem; padding: 0 2rem 0 0;">
+                            <h4>A little version of Windows</h4>
+                            <p class="text-black-50 mb-0">
+                                How many times have you open the windows task manager and see that almost just right after starting the computer, 200 processes are on execution.
+                                <br>
+                                <br>
+                                Pandora reduces the backgroud process more than 50%, by remmoving not essential components of Windows, such as calendar, camera, mailchamp, background services, Edge, Defender (not suitable for a malware/forensics labs)...
+                                <br><br>
+                                <!-- <a href="">See more details on the Wiki</a> -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-7"><img style="padding-left: 25%;" class="img-fluid mb-3 mb-lg-0" src="assets/img/systemInfoPandoraWindows.png" alt="systemImage" /></div>
+                </div>
+            </div>
+        </section>
+
+          <!-- All Windows features -->
+          <section class="projects-section bg-light" id="reversingTools">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/WindowsTools.png" alt="windowsIncluded" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>All features you will need and more!</h4>
+                            <p class="text-black-50 mb-0">
+                                Yes, pandora is yet another pickled version of Windows.
+                                <br>
+                                <br>
+                                But with the difference that all features and configurations, had specifiacly been teack with the aim of forensics and reversing, so it will not be as pickled as some gaming or little versions.                                              <br><br>
+                                <!-- <a href="">See more details on the Wiki</a> -->
                             </p>
                         </div>
                     </div>
@@ -1178,7 +1218,7 @@
                                 <td><b>Default User Information</b></td>
                                 <td>
                                     <div>
-                                        <div><b>M7P@nd0r@B0x</b></div>
+                                        <div><b>P@nd0r@B0x</b></div>
                                     </div>
                                 </td>
                             </tr>
@@ -1241,12 +1281,302 @@
                     </table>
                     <br>
                 
-                <p>If you have any questions or need help with anything you can contact me <a class="navbar-brand" href="https://www.linkedin.com/in/miguel-moreno-pastor/?locale=en_US">here</a></p>
+                <p>If you have any questions or need help with anything you can contact me <a class="navbar-brand" style="color: orange;" href="https://www.linkedin.com/in/miguel-moreno-pastor/?locale=en_US">here</a></p>
                     </div>
                 <!-- End Specific characteristics table -->
 
             </div>
         </section>
+
+        <section class="Hall-section" id="tools">
+            <div class="container px-4 px-lg-5">
+                <h1>Inlcuded Tools</h1>
+                <br>
+                <p>
+                    Here you can find a list with all tools that are included on the ISO image
+                </p>
+                <br>
+                <!-- Hardware table -->
+                <style>
+                    .toolsTable {
+                        overflow: auto;
+                        width: 100%;
+                    }
+                    
+                    .toolsTable table {
+                        border: 1px solid #dededf;
+                        height: 100%;
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-spacing: 1px;
+                        text-align: center;
+                    }
+                    
+                    .toolsTable caption {
+                        caption-side: top;
+                        text-align: center;
+                    }
+                    
+                    .toolsTable th {
+                        border: 1px solid #dededf;
+                        background-color: #f58300;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    
+                    .toolsTable td {
+                        border: 1px solid #dededf;
+                        background-color: #ffffff;
+                        color: #000000;
+                        padding: 5px;
+                    }
+                    </style>
+                    <div class="toolsTable" role="region" tabindex="0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FTK</td>
+                                <td>Forensics</td>
+                                <td>Tool used to mount images and extract artifacts</td>
+                            </tr>
+                            <tr>
+                                <td>Arsenal Image Mounter</td>
+                                <td>Forensics</td>
+                                <td>Image mounter tool</td>
+                            </tr>
+                            <tr>
+                                <td>Autopsy</td>
+                                <td>Forensics</td>
+                                <td>Foresic framework, used to create complex forensics cases and parse several artifacts (recommended for newcomers)</td>
+                            </tr>
+                            <tr>
+                                <td>Browser History View</td>
+                                <td>Forensics</td>
+                                <td>Nirsoft tool to parse browser artifacts from many browsers such as: Chrome, Edge, Firefox...</td>
+                            </tr>
+                            <tr>
+                                <td>Browser cache view</td>
+                                <td>Forensics</td>
+                                <td>Allows to render chrome cache from websides</td>
+                            </tr>
+                            <tr>
+                                <td>Scalpel 2.0</td>
+                                <td>Forensics</td>
+                                <td>A command line data carving tool</td>
+                            </tr>
+                            <tr>
+                                <td>Recuva</td>
+                                <td>Forensics</td>
+                                <td>A GUI data carving tool</td>
+                            </tr>
+                            <tr>
+                                <td>Email forensics</td>
+                                <td>Forensics</td>
+                                <td>A forensics tool to open emails files, extract headers, artifacts...</td>
+                            </tr>
+                            <tr>
+                                <td>ExifTools</td>
+                                <td>Forensics</td>
+                                <td>Commandline tool used to extract meta-data from files</td>
+                            </tr>
+                            <tr>
+                                <td>Full Event Viewer</td>
+                                <td>Forensics</td>
+                                <td>Nirsoft tool used to load all Windows evtx and run strings on it</td>
+                            </tr>
+                            <tr>
+                                <td>Hayabusa</td>
+                                <td>Forensics</td>
+                                <td>Commandline tool used to apply SIGMA rules on the EVTX and create timelines</td>
+                            </tr>
+                            <tr>
+                                <td>Logon Tracer</td>
+                                <td>Forensics</td>
+                                <td>Docker tool (recommended to run it this way) used to apply graph representation on the windows EVTX</td>
+                            </tr>
+                            <tr>
+                                <td>Loki</td>
+                                <td>Forensics</td>
+                                <td>IOC YARA scanner to run on live forensics, or mounted images</td>
+                            </tr>
+                            <tr>
+                                <td>MemProcFS</td>
+                                <td>Forensics</td>
+                                <td>Memory tool that is able to mount a virtual drive with all the extracted artifacts from a memory acquisition</td>
+                            </tr>
+                            <tr>
+                                <td>Volatility 3</td>
+                                <td>Forensics</td>
+                                <td>Next iteration of the well know tool volatility 2, used to analize memory acquisitions</td>
+                            </tr>
+                            <tr>
+                                <td>MobFS</td>
+                                <td>Forensics</td>
+                                <td>Movile Android/IOS framework for forensics investigations</td>
+                            </tr>
+                            <tr>
+                                <td>NetworkMiner</td>
+                                <td>Forensics/Reversing</td>
+                                <td>Tool to analyze memory captures or live traffic and quickly extract relevant endpoints, data, sources...</td>
+                            </tr>
+                            <tr>
+                                <td>Wireshark</td>
+                                <td>Forensics/Reversing</td>
+                                <td>Tool to deeply analyze memory captures, or live traffic</td>
+                            </tr>
+                            <tr>
+                                <td>OLE tools</td>
+                                <td>Forensics/Reversing</td>
+                                <td>Python tools to extract vba scripts from office sources</td>
+                            </tr>
+                            <tr>
+                                <td>Plaso</td>
+                                <td>Forensics</td>
+                                <td>Complex forensics tool, that can parse several forensics artifacts and create a general timeline</td>
+                            </tr>
+                            <tr>
+                                <td>RDP cache toolsuit</td>
+                                <td>Forensics</td>
+                                <td>bmc-tools and RDPCacheStitcher, this both tools are able to pase bmps stored on the RDP cache of some windows machines</td>
+                            </tr>
+                            <tr>
+                                <td>Registry Recon</td>
+                                <td>Forensics</td>
+                                <td>Arsenal tool that provides access to an enormous volume of Registry data which has been effectively deleted</td>
+                            </tr>
+                            <tr>
+                                <td>DB Browser for SQL lite</td>
+                                <td>Forensics</td>
+                                <td>SQL lite client use to open/edit SQL lite databases</td>
+                            </tr>
+                            <tr>
+                                <td>UFS Explorer</td>
+                                <td>Forensics/Reversing</td>
+                                <td>Software used to recover data from system images</td>
+                            </tr>
+                            <tr>
+                                <td>UsnJrnl To Csv</td>
+                                <td>Forensics</td>
+                                <td>Personal preference tool for parsing $J of windows machines</td>
+                            </tr>
+                            <tr>
+                                <td>Zimmerman toolsuit</td>
+                                <td>Forensics</td>
+                                <td>Collection of all well-know zimmerman toolsuit</td>
+                            </tr>
+                            <tr>
+                                <td>Ghidra</td>
+                                <td>Reversing</td>
+                                <td>With IDA one of the most famous dissasamblers</td>
+                            </tr>
+                            <tr>
+                                <td>IDA</td>
+                                <td>Reversing</td>
+                                <td>With Ghidra one of the most famous dissasamblers (recommended if you have a license)</td>
+                            </tr>
+                            <tr>
+                                <td>Windows DBG</td>
+                                <td>Reversing</td>
+                                <td>One of the best and more complex debugger for windows kernel and binaries</td>
+                            </tr>
+                            <tr>
+                                <td>x64 debugger</td>
+                                <td>Reversing</td>
+                                <td>One of most well-known debuggers for x32 bits and x64 bits binaries</td>
+                            </tr>
+                            <tr>
+                                <td>API monitor</td>
+                                <td>Reversing</td>
+                                <td>Free software that lets you monitor and control API calls made by applications and services. Its a powerful tool for seeing how applications and services work or for tracking down problems that you have in your own applications.</td>
+                            </tr>
+                            <tr>
+                                <td>CFF Suit</td>
+                                <td>Reversing</td>
+                                <td>NT Core suite to analyze PE</td>
+                            </tr>
+                            <tr>
+                                <td>CyberChef</td>
+                                <td>Forensics/Reversing</td>
+                                <td>well-know web based tool, to parse multiple types of data</td>
+                            </tr>
+                            <tr>
+                                <td>Dhrake</td>
+                                <td>Reversing</td>
+                                <td>Dhrake is a collection of scripts for reverse engineering Delphi binaries with Ghidra and IDR</td>
+                            </tr>
+                            <tr>
+                                <td>ldr</td>
+                                <td>Reversing</td>
+                                <td>Interactive Delphi Reconstructor IDR (Interactive Delphi Reconstructor) a decompiler of executable files (EXE) and dynamic libraries (DLL), written in Delphi and executed in Windows32 environment</td>
+                            </tr>
+                            <tr>
+                                <td>DetecItEz</td>
+                                <td>Reversing</td>
+                                <td>Tool to quickly identify programming languages or software packers</td>
+                            </tr>
+                            <tr>
+                                <td>DNSpy</td>
+                                <td>Reversing</td>
+                                <td>Reversing framework for .NET/C# applications</td>
+                            </tr>
+                            <tr>
+                                <td>FakeNet</td>
+                                <td>Reversing</td>
+                                <td>Mandiant tool, that emulates a fake network to perform malware debugging</td>
+                            </tr>
+                            <tr>
+                                <td>Hxd</td>
+                                <td>Forensics/Reversing</td>
+                                <td>One of the most famous hex editors</td>
+                            </tr>
+                            <tr>
+                                <td>Recaf 2.21</td>
+                                <td>Reversing</td>
+                                <td>Disassembler for Java files</td>
+                            </tr>
+                            <tr>
+                                <td>PEBeard</td>
+                                <td>Reversing</td>
+                                <td>One of the best tools for static analysis of PE structure</td>
+                            </tr>
+                            <tr>
+                                <td>Processhacker</td>
+                                <td>Reversing</td>
+                                <td>A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware</td>
+                            </tr>
+                            <tr>
+                                <td>Resource hacker</td>
+                                <td>Reversing</td>
+                                <td>Resource editor for x32/x64 binaries</td>
+                            </tr>
+                            <tr>
+                                <td>Shellcode Emulators</td>
+                                <td>Reversing</td>
+                                <td>Tools to execute and debugg shellcodes (maps64, scemu, speakeasy)</td>
+                            </tr>
+                            <tr>
+                                <td>SysInternals Toolkit</td>
+                                <td>Reversing</td>
+                                <td>Tools for troubleshooting the Windows client operating system and provides guidance on how to use them</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <p>If you want to add your own tool, please open a ticket <a class="navbar-brand" style="color: orange;" href="https://github.com/mimorep/PandoraBox/issues/new?assignees=mimorep&labels=addANewTool&projects=&template=add-a-new-tool.md&title=%5BADDTOOL%5D+%7BToolName%7D">here</a></p>
+                    </div>
+                <!-- End Tools table -->
+                <br>
+            </div>
+        </section>
+
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Developed by M7</div></footer>
         <!-- Bootstrap Imports-->
