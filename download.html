@@ -210,7 +210,15 @@
 
         // Add the action to the button
         document.getElementById("download_button").addEventListener("click", () => {
+            
+            // Register the download
+            gtag('event', 'download_click', {
+                'file_name': 'PandoraBox.iso',
+                'category': 'Downloads'
+            });            
+            
             window.location.href = download_url;
+
         });
 
     </script>
