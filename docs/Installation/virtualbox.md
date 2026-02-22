@@ -33,7 +33,7 @@ After that just run the machine as normal and it will auto-boot to the ISO
 
 Just wait for the PandoraBox installers, to complete the installation for you
 
-![pandorafirstsetp](/docs/img/pandoraWinPe.png)
+![pandorafirstsetp](/docsimg/pandoraWinPe.png)
 
 ## 6. Reboot the machine
 

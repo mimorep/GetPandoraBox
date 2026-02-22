@@ -53,4 +53,4 @@ A Ventoy panel will be prompted, just select the PandoraBox ISO.
 
 Just wait for the PandoraBox installers, to complete the installation for you
 
-![pandorafirstsetp](/docs/img/pandoraWinPe.png)
+![pandorafirstsetp](/docsimg/pandoraWinPe.png)

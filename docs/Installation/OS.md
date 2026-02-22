@@ -47,4 +47,4 @@ The letter to boot from BIOS depends on your machine vendor, look online for the
 
 Just wait for the PandoraBox installers, to complete the installation for you
 
-![pandorafirstsetp](/docs/img/pandoraWinPe.png)
+![pandorafirstsetp](/docsimg/pandoraWinPe.png)

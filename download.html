@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/pandora_logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/pandora_logo.png">
     <title>Download PandoraBox | NextGen Performance</title>
     <!-- Bootstrap CSS -->
-    <link href="/libs/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -92,8 +92,7 @@
                         </div>
                     </div>
 
-                    <!-- TODO: Tenemos que poner aqui un link directo a la wiki con los cambios realizados -->
-                    <a href="#"
+                    <a href="/docs.html?page=changelog"
                         class="text-primary-custom fw-bold text-decoration-none d-flex align-items-center gap-1">
                         View full release notes <span class="material-icons fs-6">arrow_forward</span>
                     </a>
@@ -107,6 +106,7 @@
                         </label>
                         <!-- TODO: Aqui tenemos que añadir un tag manager para controlar cuantos usuarios estan descargando pandora -->
                         <button
+                            id="download_button"
                             class="btn btn-primary-custom w-100 py-3 fw-bold fs-5 d-flex align-items-center justify-content-center gap-2 mb-3">
                             <span class="material-icons">download</span> Download ISO
                         </button>
@@ -190,7 +190,18 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="/libs/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script>
+
+        const download_id = "", 
+                download_url = `https://drive.google.com/uc?export=download&id=${download_id}`;
+
+        // Add the action to the button
+        document.getElementById("download_button").addEventListener("click", () => {
+            window.location.href = download_url;
+        });
+
+    </script>
 </body>
 
 </html>

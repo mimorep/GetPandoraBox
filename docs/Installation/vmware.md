@@ -12,7 +12,7 @@ https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Works
 
 Select the button to create a new virtual machine, select the compatibility version for Windows 25H2
 
-![vmwareCompatibilityWindows](/docs/img/vmware_windows_compatibility.png)
+![vmwareCompatibilityWindows](/docsimg/vmware_windows_compatibility.png)
 
 ## 3. Configure the VM & select the image
 
@@ -22,4 +22,4 @@ All default settings will be fine for the PandoraBox installation, just take not
 
 Just wait for the PandoraBox installers, to complete the installation for you
 
-![pandorafirstsetp](/docs/img/pandoraWinPe.png)
+![pandorafirstsetp](/docsimg/pandoraWinPe.png)
