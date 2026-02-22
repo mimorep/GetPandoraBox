@@ -1,0 +1,292 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+    --primary-color: #f47b25;
+    --primary-hover: #e66a1b;
+    --bg-dark: #1a110b;
+    --bg-card: #221710;
+    --text-light: #f8f7f5;
+    --text-muted: rgba(255, 255, 255, 0.6);
+    /* Lighter muted text for dark mode */
+    --border-color: rgba(244, 123, 37, 0.2);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: white;
+    /* Ensure headers are white */
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.text-subtitle-custom {
+    font-size: 75%;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(26, 17, 11, 0.85);
+    /* #1a110b with opacity */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: -0.02em;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(244, 123, 37, 0.3);
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 6px 20px 0 rgba(244, 123, 37, 0.4);
+}
+
+.btn-outline-custom {
+    border: 2px solid rgba(244, 123, 37, 0.5);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: rgba(244, 123, 37, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(244, 123, 37, 0.445) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Features Cards (Bento) */
+.card-custom {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-custom::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(244, 123, 37, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card-custom:hover::before {
+    opacity: 1;
+}
+
+.card-custom:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(244, 123, 37, 0.15);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(244, 123, 37, 0.1);
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(244, 123, 37, 0.2);
+}
+
+/* Glassmorphism */
+.glass-effect {
+    background: rgba(34, 23, 16, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 4rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle {
+    position: absolute;
+    background: #f47b25;
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Progress Bars */
+.progress-custom {
+    height: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar-custom {
+    height: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(244, 123, 37, 0.5);
+    border-radius: 999px;
+    transition: width 1.5s ease-out;
+}
+
+/* Utility */
+.section-padding {
+    padding: 6rem 0;
+}
+
+.text-spacing-wide {
+    letter-spacing: 0.1em;
+}
+
+/* Documentation Sidebar */
+.docs-sidebar {
+    position: sticky;
+    top: 6rem;
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+    padding-right: 1rem;
+}
+
+.docs-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.docs-nav-link:hover,
+.docs-nav-link.active {
+    background-color: rgba(244, 123, 37, 0.1);
+    color: var(--primary-color);
+}
+
+.code-block {
+    background-color: #0f0a07;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    font-family: monospace;
+    color: #e2e8f0;
+    overflow-x: auto;
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | PandoraBox</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/pandora_logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="/libs/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Marked.js for Markdown Rendering -->
+    <script src="/libs/marked.min.js"></script>
+    <style>
+        /* Markdown Styles */
+        #markdown-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        #markdown-content h2 {
+            font-size: 1.75rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        #markdown-content h3 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: bold;
+        }
+
+        #markdown-content p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        #markdown-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            background: rgba(244, 123, 37, 0.1);
+            padding: 1rem;
+            border-radius: 0.25rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        #markdown-content code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.2rem;
+            color: var(--primary-color);
+            font-family: monospace;
+        }
+
+        #markdown-content pre {
+            background: #0f0a07;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        #markdown-content pre code {
+            background: transparent;
+            padding: 0;
+            color: #e2e8f0;
+        }
+
+        #markdown-content ul {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        #markdown-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .search-results-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1a110b;
+            border: 1px solid rgba(244, 123, 37, 0.2);
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-item:hover {
+            background: rgba(244, 123, 37, 0.1);
+        }
+
+        .search-result-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .search-result-snippet {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+                    <img width="40px" height="40px" src="img/pandora_logo.png">
+                    PANDORABOX<span class="text-primary-custom">OS</span>
+                </a>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <div class="position-relative">
+                    <div
+                        class="d-none d-md-flex align-items-center bg-white bg-opacity-10 border border-white border-opacity-10 rounded px-2 py-1">
+                        <span class="material-icons text-white text-opacity-50 fs-6 me-2">search</span>
+                        <input type="text" id="docs-search-input"
+                            class="bg-transparent border-0 text-white shadow-none focus-ring-0"
+                            placeholder="Search docs..." style="outline: none; font-size: 0.85rem; width: 200px;"
+                            autocomplete="off">
+                        <kbd class="d-none d-lg-inline-block text-white text-opacity-50 border border-white border-opacity-10 rounded px-1"
+                            style="font-size: 0.6rem; background: rgba(255,255,255,0.05);">CMD+K</kbd>
+                    </div>
+                    <div id="search-results" class="search-results-dropdown"></div>
+                </div>
+                <div class="vr mx-2 d-none d-md-block text-white text-opacity-25"></div>
+                <a href="download.html" class="btn btn-primary-custom btn-sm fw-bold">Download OS</a>
+                <button class="navbar-toggler navbar-dark border-0 ms-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#docsSidebar" aria-controls="docsSidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <!-- Sidebar (Desktop) -->
+            <div class="col-lg-2 d-none d-lg-block border-end border-secondary border-opacity-25 bg-black bg-opacity-25 position-fixed"
+                style="top: 56px; bottom: 0; overflow-y: auto;">
+                <aside class="docs-sidebar p-4 h-100 border-0" id="desktop-sidebar-content">
+                    <!-- Dynamic content will be inserted here based on DOCS_PAGES folder structure -->
+                </aside>
+            </div>
+
+            <!-- Offcanvas Sidebar (Mobile) -->
+            <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="docsSidebar"
+                aria-labelledby="docsSidebarLabel">
+                <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+                    <h5 class="offcanvas-title fw-bold" id="docsSidebarLabel">PandoraBox Docs</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="mobile-sidebar-content">
+                    <!-- Dynamic content will be inserted here based on DOCS_PAGES folder structure -->
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-8 col-xl-7 pt-5 mt-5 offset-lg-2">
+                <main class="px-4 py-5 p-lg-5 mx-auto" style="max-width: 900px;">
+                    <div id="markdown-content">
+                        <!-- Content will be loaded here -->
+                        <div class="loading-spinner">
+                            <div class="spinner-border text-primary-custom" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="/libs/bootstrap.bundle.min.js"></script>
+
+    <!-- Documentation System Script -->
+    <script>
+        // Configuration: List of available documentation pages
+        const DOCS_PAGES = [
+            { id: 'intro', title: 'Introduction', path: 'docs/Intro/intro.md' },
+            { id: 'os_install', title: 'Installation', path: 'docs/Installation/OS.md' },
+            { id: 'vmware_install', title: 'VmWare', path: 'docs/Installation/vmware.md' },
+            { id: 'virtualb_install', title: 'VirtualBox', path: 'docs/Installation/virtualbox.md' },
+            { id: 'ventoy_install', title: 'Ventoy', path: 'docs/Installation/ventoy.md' },
+            { id: 'postinstall', title: 'Post-Install', path: 'docs/Throubleshooting/PostInstall.md' },
+            { id: 'updateTools', title: 'Tool updater', path: 'docs/Throubleshooting/UpdateTools.md' },
+            { id: 'changelog', title: 'Changelog', path: 'docs/Changelog/changelog.md' },
+        ];
+
+        let searchIndex = [];
+        const contentDiv = document.getElementById('markdown-content');
+        const searchInput = document.getElementById('docs-search-input');
+        const searchResults = document.getElementById('search-results');
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 1. Build sidebar dynamically based on folders
+            renderSidebar();
+
+            // 2. Load current page
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageId = urlParams.get('page') || 'intro';
+            loadPage(pageId);
+
+            // 3. Build Search Index in background
+            await buildSearchIndex();
+
+            // 3. Setup Search Listeners
+            if (searchInput) {
+                searchInput.addEventListener('input', handleSearch);
+                searchInput.addEventListener('focus', () => { if (searchInput.value) searchResults.style.display = 'block'; });
+
+                // Close search when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                        searchResults.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        function renderSidebar() {
+            const sections = {};
+
+            // Group pages by the first folder directory
+            DOCS_PAGES.forEach(page => {
+                // Ignore 'docs/' directory if it is the root folder
+                let normalizedPath = page.path.startsWith('docs/') ? page.path.substring(5) : page.path;
+                let folderParts = normalizedPath.split('/');
+
+                let sectionName = 'General';
+                if (folderParts.length > 1) {
+                    sectionName = folderParts[0];
+                    // Format correctly (capitalize and replace hyphens/underscores with spaces)
+                    sectionName = sectionName.charAt(0).toUpperCase() + sectionName.slice(1).replace(/[-_]/g, ' ');
+                }
+
+                if (!sections[sectionName]) {
+                    sections[sectionName] = [];
+                }
+                sections[sectionName].push(page);
+            });
+
+            // Generate HTML for sections
+            let sidebarHtml = '';
+            for (const [section, pages] of Object.entries(sections)) {
+                sidebarHtml += `
+                    <div class="mb-4">
+                        <h6 class="text-primary-custom text-uppercase fw-bold small text-spacing-wide mb-3">${section}</h6>
+                        <nav class="nav flex-column gap-1">
+                            ${pages.map(p => `<a class="docs-nav-link" href="?page=${p.id}" data-page-id="${p.id}">${p.title}</a>`).join('')}
+                        </nav>
+                    </div>
+                `;
+            }
+
+            // Insert into both sidebars
+            const desktopContent = document.getElementById('desktop-sidebar-content');
+            const mobileContent = document.getElementById('mobile-sidebar-content');
+
+            if (desktopContent) desktopContent.innerHTML = sidebarHtml;
+            if (mobileContent) mobileContent.innerHTML = sidebarHtml;
+        }
+
+        async function loadPage(pageId) {
+            // Highlight active link
+            document.querySelectorAll('.docs-nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll(`.docs-nav-link[data-page-id="${pageId}"]`).forEach(link => link.classList.add('active'));
+
+            // Find page info
+            const page = DOCS_PAGES.find(p => p.id === pageId) || DOCS_PAGES[0];
+
+            try {
+                const response = await fetch(page.path);
+                if (!response.ok) throw new Error('Page not found');
+                const markdown = await response.text();
+                contentDiv.innerHTML = marked.parse(markdown);
+                window.scrollTo(0, 0);
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <h4 class="alert-heading">Error 404</h4>
+                        <p>The documentation page "${page.path}" could not be loaded.</p>
+                        <hr>
+                        <p class="mb-0 small">Please ensure you are running this on a local web server (not file://) and the file exists.</p>
+                    </div>
+                `;
+            }
+        }
+
+        async function buildSearchIndex() {
+            // Fetch all pages content to build an index
+            const promises = DOCS_PAGES.map(async (page) => {
+                try {
+                    const res = await fetch(page.path);
+                    const text = await res.text();
+                    // Strip markdown to simple text for searching
+                    const cleanText = text.replace(/[#*`\[\]()]/g, '');
+                    return { ...page, content: cleanText };
+                } catch (e) {
+                    console.warn(`Failed to index ${page.id}`, e);
+                    return null;
+                }
+            });
+
+            const results = await Promise.all(promises);
+            searchIndex = results.filter(p => p !== null);
+        }
+
+        function handleSearch(e) {
+            const query = e.target.value.toLowerCase();
+            if (!query) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const matches = searchIndex.filter(item =>
+                item.title.toLowerCase().includes(query) ||
+                item.content.toLowerCase().includes(query)
+            );
+
+            renderSearchResults(matches, query);
+        }
+
+        function renderSearchResults(matches, query) {
+            if (matches.length === 0) {
+                searchResults.innerHTML = '<div class="p-3 text-muted small">No results found</div>';
+            } else {
+                searchResults.innerHTML = matches.map(match => {
+                    // Create a snippet
+                    const idx = match.content.toLowerCase().indexOf(query);
+                    const start = Math.max(0, idx - 20);
+                    const end = Math.min(match.content.length, idx + 50);
+                    const snippet = '...' + match.content.substring(start, end) + '...';
+
+                    return `
+                        <div class="search-result-item" onclick="window.location.href='?page=${match.id}'">
+                            <div class="search-result-title">${match.title}</div>
+                            <div class="search-result-snippet">${snippet}</div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            searchResults.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
